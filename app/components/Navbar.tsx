@@ -9,7 +9,7 @@ const Navbar = () => {
     >
       <div className="flex flex-row justify-center items-center gap-2">
         <Image
-          src="/logo.svg"
+          src="/icons/logo.svg"
           alt="Sell"
           width={100}
           height={100}

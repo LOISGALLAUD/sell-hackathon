@@ -7,7 +7,7 @@ const Footer = () => {
     <nav className="w-[70%] mb-10 flex flex-row justify-between items-center">
       <div className="flex flex-row justify-center items-center gap-2">
         <Image
-          src="/logo-dark.svg"
+          src="/icons/logo-dark.svg"
           alt="Sell"
           width={100}
           height={100}

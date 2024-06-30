@@ -56,6 +56,9 @@ const config = {
         "sell-secondary": "#FE9C9C",
         "sell-background": "#F5F5F5",
         "sell-dark": "#282828",
+        "sell-light": "#626262",
+        "sell-fog": "#92C4FE",
+        "sell-lava": "#FEA492",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,10 +74,15 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        shine: {
+          "0%": { left: "-100%" },
+          "100%": { left: "100%" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shine: "shine 8s infinite ease-in-out",
       },
       fontFamily: {
         dela: ["Dela Gothic One", "sans-serif"],
