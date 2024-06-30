@@ -23,7 +23,7 @@ const Hero = () => {
         Introducing a new online selling platform 🎉
       </p>
 
-      <h1 className="text-8xl font-bold mt-16 mb-8">
+      <h1 className="text-7xl font-bold mt-16 mb-8 font-dela">
         Best way to sell <br /> your digital product
       </h1>
 

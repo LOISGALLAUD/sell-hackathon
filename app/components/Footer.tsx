@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const Footer = () => {
   return (
-    <nav className="w-[70%] mb-10 flex flex-row justify-between items-center">
+    <nav className="w-[70%] mb-10 flex flex-row justify-between items-center font-dm">
       <div className="flex flex-row justify-center items-center gap-2">
         <Image
           src="/icons/logo-dark.svg"

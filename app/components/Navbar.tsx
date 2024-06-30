@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav
       className="bg-sell-dark rounded-xl px-4 py-3 w-[70%] mt-10
-    flex flex-row justify-between items-center text-white"
+    flex flex-row justify-between items-center text-white font-dm"
     >
       <div className="flex flex-row justify-center items-center gap-2">
         <Image

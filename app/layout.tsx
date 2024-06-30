@@ -21,7 +21,7 @@ export default function RootLayout({
       <body
         className={cn(
           inter.className,
-          "font-dela text-sell-dark bg-sell-background \
+          "text-sell-dark bg-sell-background \
           flex flex-col justify-center items-center px-64"
         )}
       >
