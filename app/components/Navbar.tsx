@@ -1,5 +1,28 @@
+import Image from "next/image";
+import { BsTwitterX } from "react-icons/bs";
+
 const Navbar = () => {
-  return <div>Navbar</div>;
+  return (
+    <nav
+      className="bg-sell-dark rounded-xl px-4 py-3 w-[70%] mt-10
+    flex flex-row justify-between items-center text-white"
+    >
+      <div className="flex flex-row justify-center items-center gap-2">
+        <Image
+          src="/logo.svg"
+          alt="Sell"
+          width={100}
+          height={100}
+          className="size-7"
+        />
+        <h1 className="text-xl font-[500]">Sell</h1>
+      </div>
+      <div className="flex flex-row justify-center items-center gap-3">
+        <BsTwitterX className="text-lg" />
+        <h1>Follow us on Twitter</h1>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

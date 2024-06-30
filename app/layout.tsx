@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Footer from "./components/Footer";
@@ -17,7 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={cn(
+          inter.className,
+          "font-dela text-sell-dark bg-sell-background \
+          flex flex-col justify-center items-center px-64"
+        )}
+      >
         <Navbar />
         {children}
         <Footer />
