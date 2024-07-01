@@ -58,28 +58,28 @@ export const features: {
 }[] = [
   {
     icon: FaPiggyBank,
-    iconColor: "#F9CF7F",
+    iconColor: "text-piggy-bank",
     title: "Save time & Reduce cost",
     description:
       "Building your own online store, shopping cart, checkout, and licensing is time-consuming ",
   },
   {
     icon: FaStar,
-    iconColor: "#4DA8CC",
+    iconColor: "text-star",
     title: "Packed with Features",
     description:
       "We simplify all that by combining all of the features and solutions you need to sell.",
   },
   {
     icon: FaFire,
-    iconColor: "#F09B83",
+    iconColor: "text-fire",
     title: "Boost Your Best Sellers",
     description:
       "Designed from the ground up to be easy to use and quick to set up for sellers",
   },
   {
     icon: FaEarthAfrica,
-    iconColor: "#E6BF9F",
+    iconColor: "text-earth",
     title: "Go Global",
     description:
       "Expand into new global markets with ease when you automatically display popular pricing",

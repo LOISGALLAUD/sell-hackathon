@@ -39,7 +39,7 @@ const RevealBento = () => {
                 <AccordionTrigger>
                   <div className="flex items-center gap-4">
                     <feature.icon
-                      className={cn("text-4xl", `text-[${feature.iconColor}]`)}
+                      className={cn("text-4xl", feature.iconColor)}
                     />
                     <div className="relative">
                       <h3 className="text-xl font-medium">{feature.title}</h3>
@@ -78,8 +78,52 @@ const RevealBento = () => {
   );
 };
 
-const Block = ({ className, ...rest }) => {
-  return (
+const HeaderBlock = () => (
+  <motion.div
+    variants={{
+      initial: {
+        scale: 0.5,
+        y: 50,
+        opacity: 0,
+      },
+      animate: {
+        scale: 1,
+        y: 0,
+        opacity: 1,
+      },
+    }}
+    transition={{
+      type: "spring",
+      stiffness: 1000,
+      damping: 50,
+    }}
+    className={twMerge(
+      "col-span-4 rounded-3xl shadow-md bg-white p-6",
+      "col-span-12 row-span-2 md:col-span-6"
+    )}
+  >
+    <img
+      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
+      alt="avatar"
+      className="mb-4 size-14 rounded-full ring-sell-dark ring-2"
+    />
+    <h1 className="mb-12 text-4xl font-medium leading-tight">
+      <span className="italic">Sell</span>-utations !{" "}
+      <span className="text-sell-light">
+        We are a digital product selling platform.
+      </span>
+    </h1>
+    <a
+      href="#"
+      className="flex items-center gap-1 text-sell-primary hover:underline"
+    >
+      Contact us on social media <FiArrowRight />
+    </a>
+  </motion.div>
+);
+
+const SocialsBlock = () => (
+  <>
     <motion.div
       variants={{
         initial: {
@@ -100,43 +144,12 @@ const Block = ({ className, ...rest }) => {
       }}
       className={twMerge(
         "col-span-4 rounded-3xl shadow-md bg-white p-6",
-        className
+        "col-span-6 bg-sell-dark md:col-span-3"
       )}
-      {...rest}
-    />
-  );
-};
-
-const HeaderBlock = () => (
-  <Block className="col-span-12 row-span-2 md:col-span-6">
-    <img
-      src="https://api.dicebear.com/8.x/lorelei-neutral/svg?seed=John"
-      alt="avatar"
-      className="mb-4 size-14 rounded-full ring-sell-dark ring-2"
-    />
-    <h1 className="mb-12 text-4xl font-medium leading-tight">
-      <span className="italic">Sell</span>-utations !{" "}
-      <span className="text-sell-light">
-        We are a digital product selling platform.
-      </span>
-    </h1>
-    <a
-      href="#"
-      className="flex items-center gap-1 text-sell-primary hover:underline"
-    >
-      Contact us on social media <FiArrowRight />
-    </a>
-  </Block>
-);
-
-const SocialsBlock = () => (
-  <>
-    <Block
       whileHover={{
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-sell-dark md:col-span-3"
     >
       <a
         href="https://github.com/loisgallaud"
@@ -146,13 +159,33 @@ const SocialsBlock = () => (
       >
         <SiGithub />
       </a>
-    </Block>
-    <Block
+    </motion.div>
+    <motion.div
+      variants={{
+        initial: {
+          scale: 0.5,
+          y: 50,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 1000,
+        damping: 50,
+      }}
+      className={twMerge(
+        "col-span-4 rounded-3xl shadow-md bg-white p-6",
+        "col-span-6 bg-white md:col-span-3"
+      )}
       whileHover={{
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-white md:col-span-3"
     >
       <a
         href="https://who-is-loisg.vercel.app"
@@ -162,14 +195,34 @@ const SocialsBlock = () => (
       >
         <SlGlobe />
       </a>
-    </Block>
+    </motion.div>
 
-    <Block
+    <motion.div
+      variants={{
+        initial: {
+          scale: 0.5,
+          y: 50,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 1000,
+        damping: 50,
+      }}
+      className={twMerge(
+        "col-span-4 rounded-3xl shadow-md bg-white p-6",
+        "col-span-6 bg-white md:col-span-3"
+      )}
       whileHover={{
         rotate: "-2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-white md:col-span-3"
     >
       <a
         href="https://www.linkedin.com/in/loisgallaud/"
@@ -179,23 +232,44 @@ const SocialsBlock = () => (
       >
         <FaLinkedin />
       </a>
-    </Block>
-    <Block
+    </motion.div>
+
+    <motion.div
+      variants={{
+        initial: {
+          scale: 0.5,
+          y: 50,
+          opacity: 0,
+        },
+        animate: {
+          scale: 1,
+          y: 0,
+          opacity: 1,
+        },
+      }}
+      transition={{
+        type: "spring",
+        stiffness: 1000,
+        damping: 50,
+      }}
+      className={twMerge(
+        "col-span-4 rounded-3xl shadow-md bg-white p-6",
+        "col-span-6 bg-sell-dark md:col-span-3"
+      )}
       whileHover={{
         rotate: "2.5deg",
         scale: 1.1,
       }}
-      className="col-span-6 bg-sell-dark md:col-span-3"
     >
       <a
-        href="https://x.com/loisglld"
+        href="https://twitter.com/loisgallaud"
         target="_blank"
         rel="noreferrer"
         className="grid h-full place-content-center text-3xl text-white"
       >
         <BsTwitterX />
       </a>
-    </Block>
+    </motion.div>
   </>
 );
 

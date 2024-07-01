@@ -59,6 +59,10 @@ const config = {
         "sell-light": "#626262",
         "sell-fog": "#92C4FE",
         "sell-lava": "#FEA492",
+        "piggy-bank": "#78D23D",
+        star: "#ffd61f",
+        fire: "#f53c36",
+        earth: "#314EE7",
       },
       borderRadius: {
         lg: "var(--radius)",

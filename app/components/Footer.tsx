@@ -17,8 +17,12 @@ const Footer = () => {
       </div>
       <ul className="flex flex-row justify-center items-center gap-5 font-[500] text-sm">
         {footerLinks.map((link, index) => (
-          <Link key={index} href={link.href}>
+          <Link key={index} href={link.href} className="relative group">
             <li>{link.title}</li>
+            <span
+              className="absolute bottom-0 left-0 h-[2px] w-0 bg-sell-dark
+                      transition-all delay-0 duration-200 group-hover:w-full"
+            />
           </Link>
         ))}
       </ul>

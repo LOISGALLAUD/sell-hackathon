@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import BeamChart from "./BeamChart";
 import DoughnutCharts from "./DoughnutCharts";
 import SalesFigures from "./SalesFigures";
@@ -9,15 +11,24 @@ const Charts = () => {
      justify-center items-center"
     >
       {/* Background */}
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.25 }}
+        transition={{ duration: 3, opacity: { delay: 0.5 } }}
         className="bg-white inline-block z-[-1]
-        rounded-[2rem] size-full gap-10 h-96 w-[88%] opacity-25"
+        rounded-[2rem] size-full gap-10 h-96 w-[88%]"
       />
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 0.5 }}
+        transition={{ duration: 3, opacity: { delay: 0.25 } }}
         className="bg-white inline-block z-[-1]
-        rounded-[2rem] size-full gap-10 h-96 w-[92%] opacity-50"
+        rounded-[2rem] size-full gap-10 h-96 w-[92%]"
       />
-      <div
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 3 }}
         className="bg-white inline-block z-[-1]
         rounded-[2rem] size-full gap-10 h-96 w-[96%]"
       />
