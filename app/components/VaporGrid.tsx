@@ -11,7 +11,7 @@ const circles = [
     left: "15%",
     x: [0, 150, 300, 150, 0],
     y: [0, 100, 200, 100, 0],
-    duration: 13,
+    duration: 10,
   },
   {
     className: "bg-sell-lava",
@@ -20,7 +20,7 @@ const circles = [
     left: "70%",
     x: [0, -200, -400, -100, 50, 0],
     y: [0, -50, -100, 50, 0],
-    duration: 20,
+    duration: 17,
   },
   {
     className: "bg-sell-fog",
@@ -38,7 +38,7 @@ const circles = [
     left: "80%",
     x: [0, -150, -300, -150, 0],
     y: [0, -100, -200, -100, 0],
-    duration: 15,
+    duration: 12,
   },
   {
     className: "bg-sell-fog",
@@ -47,7 +47,7 @@ const circles = [
     left: "10%",
     x: [0, 100, 200, 100, 0],
     y: [0, 50, 100, 50, 0],
-    duration: 12,
+    duration: 9,
   },
   {
     className: "bg-sell-lava",
@@ -56,7 +56,7 @@ const circles = [
     left: "60%",
     x: [0, -100, -200, -50, 0],
     y: [0, -50, -100, -50, 0],
-    duration: 18,
+    duration: 16,
   },
   {
     className: "bg-sell-lava",
@@ -95,7 +95,7 @@ const VaporGrid: React.FC = () => {
         {circles.map((circle, index) => (
           <motion.div
             key={index}
-            className={`absolute ${circle.className} opacity-75 ${circle.size} rounded-full blur-3xl`}
+            className={`absolute ${circle.className} opacity-75 ${circle.size} rounded-full blur-2xl`}
             style={{ top: circle.top, left: circle.left }}
             custom={circle}
             variants={{
