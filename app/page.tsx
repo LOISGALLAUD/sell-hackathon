@@ -1,4 +1,5 @@
 import Charts from "./components/Charts";
+import Features from "./components/Features";
 import Hero from "./components/Hero";
 import Newsletter from "./components/Newsletter";
 
@@ -7,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-start w-full font-dm">
       <Hero />
       <Charts />
-      {/* Features */}
+      <Features />
       <Newsletter />
     </main>
   );

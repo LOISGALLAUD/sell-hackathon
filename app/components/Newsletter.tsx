@@ -1,16 +1,40 @@
 "use client";
 
+import { useToast } from "@/components/ui/use-toast";
+import { getNameFromEmail, isValidEmail } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 
 const Newsletter = () => {
+  const { toast } = useToast();
   const [clicked, setClicked] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    setClicked(false);
+  };
+
+  const handleSubmit = () => {
+    if (isValidEmail(email)) {
+      toast({
+        title: `✅ Welcome ${getNameFromEmail(email)} !`,
+        description: `${email} address has been added to the waitlist.`,
+      });
+      setClicked(true);
+    } else {
+      toast({
+        title: "❌ Invalid",
+        description: "Please enter a valid email address.",
+      });
+    }
+  };
 
   return (
     <section
       className="bg-white rounded-2xl w-[90%] px-28 py-20 mt-20
-    flex flex-col justify-center items-center"
+    flex flex-col justify-center items-center shadow-md"
     >
       <h1 className="font-dela text-5xl text-center mb-8">
         Be the first to know about new features, special offers, and more.
@@ -19,15 +43,16 @@ const Newsletter = () => {
         <input
           type="email"
           placeholder="Your best email address"
+          value={email}
+          onChange={handleEmailChange}
           className="rounded-xl w-[66%] h-16 p-5 font-light shadow-md"
         />
         <button
-          onClick={() => setClicked(!clicked)}
+          onClick={handleSubmit}
           className="bg-sell-primary text-white font-semibold rounded-xl w-[34%]
         transition-all shadow-[3px_3px_0px_black] h-16
         hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
         >
-          {/* Try it out */}
           {clicked ? (
             <motion.div
               initial={{ scale: 0, opacity: 0 }}

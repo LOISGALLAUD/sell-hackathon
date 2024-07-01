@@ -1,6 +1,8 @@
 "use client";
 
+import { useToast } from "@/components/ui/use-toast";
 import { avatars } from "@/constants";
+import { getNameFromEmail, isValidEmail } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
@@ -9,6 +11,28 @@ import VaporGrid from "./VaporGrid";
 
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
+  const { toast } = useToast();
+  const [email, setEmail] = useState("");
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    setClicked(false);
+  };
+
+  const handleSubmit = () => {
+    if (isValidEmail(email)) {
+      toast({
+        title: `✅ Welcome ${getNameFromEmail(email)} !`,
+        description: `${email} address has been added to the waitlist.`,
+      });
+      setClicked(true);
+    } else {
+      toast({
+        title: "❌ Invalid",
+        description: "Please enter a valid email address.",
+      });
+    }
+  };
   return (
     <section className="flex flex-col justify-center items-center text-center py-14 w-full mb-20">
       <VaporGrid />
@@ -36,10 +60,12 @@ const Hero = () => {
         <input
           type="email"
           placeholder="Your best email address"
+          value={email}
+          onChange={handleEmailChange}
           className="rounded-xl w-[66%] h-16 p-5 font-light"
         />
         <button
-          onClick={() => setClicked(!clicked)}
+          onClick={handleSubmit}
           className="bg-sell-primary text-white font-semibold rounded-xl w-[34%]
         transition-all shadow-[3px_3px_0px_black] h-16
         hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
