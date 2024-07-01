@@ -121,11 +121,6 @@ const VaporGrid: React.FC = () => {
         ))}
       </div>
       {/* Grille */}
-      {/* <div className="grid grid-cols-10 grid-rows-10 h-full w-full opacity-20 z-[-1]">
-        {[...Array(100)].map((_, i) => (
-          <div key={i} className="border border-white"></div>
-        ))}
-      </div> */}
       <div
         className="grid grid-cols-12 grid-rows-10 h-full w-full
        opacity-20 z-[-1]"

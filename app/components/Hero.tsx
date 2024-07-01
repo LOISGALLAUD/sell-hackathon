@@ -10,7 +10,7 @@ import VaporGrid from "./VaporGrid";
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
   return (
-    <section className="flex flex-col justify-center items-center text-center py-14 w-full">
+    <section className="flex flex-col justify-center items-center text-center py-14 w-full mb-20">
       <VaporGrid />
       <p
         className="relative rounded-full py-2 px-4 bg-gradient-to-r from-sell-secondary
@@ -23,7 +23,7 @@ const Hero = () => {
         Introducing a new online selling platform 🎉
       </p>
 
-      <h1 className="text-7xl font-bold mt-16 mb-8 font-dela">
+      <h1 className="text-8xl font-bold mt-16 mb-8 font-dela">
         Best way to sell <br /> your digital product
       </h1>
 
@@ -87,9 +87,9 @@ const Hero = () => {
         </ul>
 
         {/* desc */}
-        <p className="text-sm text-start">
-          <span className="font-semibold">More than 100+</span> users are
-          selling their products <br /> online with simple & easy ways
+        <p className="text-sm text-start text-sell-light">
+          <span className="font-semibold text-black">More than 100+</span> users
+          are selling their products <br /> online with simple & easy ways
         </p>
       </div>
     </section>

@@ -22,7 +22,7 @@ export default function RootLayout({
         className={cn(
           inter.className,
           "text-sell-dark bg-sell-background \
-          flex flex-col justify-center items-center px-64"
+          flex flex-col justify-center items-center px-48"
         )}
       >
         <Navbar />
