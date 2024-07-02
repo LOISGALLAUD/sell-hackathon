@@ -9,8 +9,8 @@ const SpringModalButton = () => {
     <>
       <button
         onClick={() => setIsOpen(true)}
-        className="bg-sell-primary text-white font-medium 
-        px-4 py-2 rounded hover:opacity-90
+        className="bg-sell-primary text-white font-medium text-sm
+        px-4 py-1 rounded hover:opacity-90
         transition-all shadow-[3px_3px_0px_black]
         hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
       >

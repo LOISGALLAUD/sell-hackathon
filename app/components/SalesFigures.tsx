@@ -30,34 +30,38 @@ const SalesFigures = () => {
     labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   };
   return (
-    <div className="p-5 bg-white h-full w-[40%] rounded-xl shadow-md shadow-sell-dark">
+    <div className="p-5 bg-white xl:h-full xl:w-[40%] size-full rounded-xl shadow-md shadow-sell-dark">
       {/* Title */}
-      <h2 className="text-2xl font-semibold mb-5 text-center">
+      <h2 className="xl:text-2xl text-xl font-semibold xl:mb-5 mb-3 text-center">
         Skyrocket your sales
       </h2>
 
       {/* Content Bag */}
       <div className="flex flex-col justify-between items-center">
         <div className="flex justify-center items-center gap-3">
-          <div className="p-4 bg-[#e3e7ff] rounded-full flex justify-center items-center">
-            <BsFillRocketTakeoffFill className="text-3xl text-[#3d53d2]" />
+          <div className="xl:p-4 p-2 bg-[#e3e7ff] rounded-full flex justify-center items-center">
+            <BsFillRocketTakeoffFill className="xl:text-3xl text-xl text-[#3d53d2]" />
           </div>
 
           <div className="flex flex-col justify-start">
-            <p className="text-md">
-              <span className="font-semibold">Reach your goals &nbsp;</span>
-              with the help of our platform
+            <p className="xl:text-md text-sm">
+              <span className="font-normal xl:font-semibold">
+                Reach your goals &nbsp;
+              </span>
+              <span className="hidden xl:block">
+                with the help of our platform
+              </span>
             </p>
           </div>
 
           <div className="flex flex-row justify-center items-center">
-            <h2 className="text-2xl font-bold">$27k</h2>
-            <IoMdArrowDropup className="text-3xl text-[#78D23D]" />
+            <h2 className="xl:text-2xl text-lg font-bold">$27k</h2>
+            <IoMdArrowDropup className="xl:text-3xl text-xl text-[#78D23D]" />
           </div>
         </div>
 
-        <div className="size-full flex justify-between items-center px-5 gap-10">
-          <div className="h-[6rem]">
+        <div className="size-full flex xl:justify-between justify-center items-center px-5 gap-10">
+          <div className="h-[6rem] hidden xl:block">
             <Line
               data={dataSkyRocket}
               options={{
@@ -83,8 +87,10 @@ const SalesFigures = () => {
               }}
             />
           </div>
-          <div className="flex flex-col justify-center items-center gap-2">
-            <h4 className="text-sm ml-2 text-center">Fantastic right ?</h4>
+          <div className="flex flex-col justify-center items-center gap-2 mt-5 xl:mt-0">
+            <h4 className="hidden xl:block text-sm ml-2 text-center">
+              Fantastic right ?
+            </h4>
             <SpringModalButton />
           </div>
         </div>

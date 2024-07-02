@@ -40,43 +40,47 @@ const Hero = () => {
     }
   };
   return (
-    <section className="flex flex-col justify-center items-center text-center py-14 w-full mb-20">
+    <section
+      className="flex flex-col justify-center items-center text-center
+     xl:py-14 py-10 w-full xl:mb-20 mb-10"
+    >
       <VaporGrid />
       <p
-        className="relative rounded-full py-2 px-4 bg-gradient-to-r from-sell-secondary
-       to-sell-primary text-white text-sm font-medium overflow-hidden"
+        className="relative rounded-full py-2 xl:px-4 px-3 bg-gradient-to-r from-sell-secondary
+       to-sell-primary text-white xl:text-sm text-xs font-medium overflow-hidden"
       >
         <span
           className="absolute top-0 left-0 w-full h-full bg-gradient-to-r 
         from-transparent via-white to-transparent opacity-75 blur-lg animate-shine"
-        ></span>
+        />
         Introducing a new online selling platform 🎉
       </p>
 
-      <h1 className="text-8xl font-bold mt-16 mb-8 font-dela">
-        Best way to sell <br /> your digital product
+      <h1 className="xl:text-8xl text-5xl font-bold xl:mt-16 mt-10 mb-10 font-dela max-xl:leading-tight">
+        Best way to sell <br className="hidden xl:block" /> your digital product
       </h1>
 
-      <h2 className="text-sell-light text-xl">
-        Go from Zero to Hero with simple platform that helps <br /> creators
-        like you sell their digital products online.
+      <h2 className="text-sell-light xl:text-xl text-md">
+        Go from Zero to Hero with simple platform that helps{" "}
+        <br className="hidden xl:block" /> creators like you sell their digital
+        products online.
       </h2>
 
-      <div className="flex flex-row justify-center items-center my-5 gap-3 w-[45%]">
-        <div className="relative w-[66%] h-16 rounded-xl">
+      <div className="flex flex-row justify-center items-center my-5 xl:gap-3 gap-1 xl:w-[45%] w-full">
+        <div className="relative w-[66%] xl:h-16 h-12 xl:rounded-xl rounded-md">
           <input
             type="email"
             placeholder="Your best email address"
             value={email}
             onChange={handleEmailChange}
-            className="font-light w-full rounded-xl p-5 focus:outline-none"
+            className="font-light size-full xl:rounded-xl rounded-md p-5 focus:outline-none shadow-md xl:text-base text-xs"
           />
           <BorderBeam />
         </div>
         <button
           onClick={handleSubmit}
-          className="bg-sell-primary text-white font-semibold rounded-xl w-[34%]
-        transition-all shadow-[3px_3px_0px_black] h-16
+          className="bg-sell-primary text-white font-semibold xl:rounded-xl rounded-md w-[34%]
+        transition-all shadow-[3px_3px_0px_black] xl:h-16 h-12
         hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
         >
           {/* Try it out */}
@@ -94,7 +98,7 @@ const Hero = () => {
       </div>
 
       {/* ratings */}
-      <div className="flex flex-row justify-center items-center w-[35%]">
+      <div className="flex xl:flex-row flex-col justify-center items-center xl:w-[35%] w-full xl:gap-0 gap-2">
         {/* avatars */}
         <ul className="flex -space-x-3 mr-4">
           {avatars.map((avatar, index) =>
@@ -122,9 +126,10 @@ const Hero = () => {
         </ul>
 
         {/* desc */}
-        <p className="text-sm text-start text-sell-light">
+        <p className="xl:text-sm text-xs xl:text-start text-center text-sell-light w-2/3">
           <span className="font-semibold text-black">More than 100+</span> users
-          are selling their products <br /> online with simple & easy ways
+          are selling their products <br className="hidden xl:block" /> online
+          with simple & easy ways
         </p>
       </div>
     </section>

@@ -7,14 +7,14 @@ import React, { forwardRef, useRef } from "react";
 
 const BeamChart = () => {
   return (
-    <div className="p-5 bg-white h-full w-[40%] rounded-xl overflow-hidden relative shadow-md shadow-sell-dark">
+    <div className="p-5 bg-white xl:h-full xl:w-[40%] size-full rounded-xl overflow-hidden relative shadow-md shadow-sell-dark">
       {/* Title */}
-      <h2 className="text-2xl font-semibold mb-5 text-center">
+      <h2 className="xl:text-2xl text-xl font-semibold xl:mb-5 mb-3 text-center max-xl:leading-tight">
         Enhance your workflow
       </h2>
 
       {/* Content Bag */}
-      <div className="flex flex-col justify-between items-center h-[10rem]">
+      <div className="flex flex-col justify-between items-center xl:h-[10rem] size-full">
         <AnimatedBeamMultipleOutputDemo />
       </div>
 
@@ -41,7 +41,8 @@ const Circle = forwardRef<
     <div
       ref={ref}
       className={cn(
-        "z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 bg-white p-3 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
+        "z-10 flex xl:size-12 size-10 items-center justify-center rounded-full\
+        border-2 bg-white xl:p-3 p-2 shadow-[0_0_20px_-12px_rgba(0,0,0,0.8)]",
         className
       )}
     >
@@ -66,19 +67,19 @@ export function AnimatedBeamMultipleOutputDemo({
     <div
       className={cn(
         "relative flex w-full max-w-[500px] items-center justify-center\
-        overflow-hidden rounded-lg bg-background p-10",
+        overflow-hidden rounded-lg bg-background xl:p-10 p-2",
         className
       )}
       ref={containerRef}
     >
-      <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
+      <div className="flex h-full w-full flex-row items-stretch justify-between xl:gap-10 gap-5">
         <div className="flex flex-col justify-center">
           <Circle ref={div1Ref}>
             <Icons.user />
           </Circle>
         </div>
         <div className="flex flex-col justify-center">
-          <Circle ref={div2Ref} className="h-16 w-16">
+          <Circle ref={div2Ref} className="size-14">
             <Image
               src="/icons/logo-dark.svg"
               alt="Sell"

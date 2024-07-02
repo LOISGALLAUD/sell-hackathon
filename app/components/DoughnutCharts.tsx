@@ -31,28 +31,30 @@ const DoughnutCharts = () => {
   };
 
   return (
-    <div className="p-5 bg-white h-full w-[40%] rounded-xl shadow-md shadow-sell-dark">
+    <div className="p-5 bg-white xl:h-full xl:w-[40%] size-full rounded-xl shadow-md shadow-sell-dark">
       {/* Title */}
-      <h2 className="text-2xl font-semibold mb-5 text-center">
+      <h2 className="xl:text-2xl text-xl font-semibold xl:mb-5 mb-3 text-center">
         Manage your store
       </h2>
 
       {/* Content Bag */}
       <div className="flex justify-center items-center gap-3">
-        <div className="p-4 bg-[#faf2e8] rounded-full flex justify-center items-center">
-          <FaBagShopping className="text-3xl text-[#EC9D40]" />
+        <div className="xl:p-4 p-2 bg-[#faf2e8] rounded-full flex justify-center items-center">
+          <FaBagShopping className="xl:text-3xl text-xl text-[#EC9D40]" />
         </div>
 
         <div className="flex flex-col justify-start">
-          <p className="text-md">
-            <span className=" font-semibold">
+          <p className="xl:text-md text-sm">
+            <span className="font-normal xl:font-semibold">
               Be the first to know about new orders &nbsp;
             </span>
-            and keep track of your store's performance
+            <span className="hidden xl:block">
+              and keep track of your store's performance
+            </span>
           </p>
         </div>
 
-        <div className="size-16 ml-5">
+        <div className="xl:size-16 size-12 xl:ml-5 ml-2">
           <Doughnut
             data={dataBag}
             options={{
@@ -71,19 +73,23 @@ const DoughnutCharts = () => {
       </div>
 
       {/* Content Cart */}
-      <div className="flex justify-center items-center gap-3 mt-5">
-        <div className="p-4 bg-[#fceaea] rounded-full flex justify-center items-center">
-          <IoMdCart className="text-3xl text-[#FD8B8B]" />
+      <div className="flex justify-center items-center gap-3 xl:mt-5 mt-2">
+        <div className="xl:p-4 p-2 bg-[#fceaea] rounded-full flex justify-center items-center">
+          <IoMdCart className="xl:text-3xl text-xl text-[#FD8B8B]" />
         </div>
 
         <div className="flex flex-col justify-start">
-          <p className="text-md">
-            <span className=" font-semibold">Manage your products &nbsp;</span>
-            and keep track of your store's performance
+          <p className="xl:text-md text-sm flex justify-center items-center">
+            <span className="font-normal xl:font-semibold flex justify-center items-center">
+              Manage your products &nbsp;
+            </span>
+            <span className="hidden xl:block">
+              and keep track of your store's performance
+            </span>
           </p>
         </div>
 
-        <div className="size-16 ml-5">
+        <div className="xl:size-16 size-12 xl:ml-5 ml-2">
           <Doughnut
             data={dataCart}
             options={{
