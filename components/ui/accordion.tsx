@@ -2,8 +2,8 @@
 
 import { cn } from "@/lib/utils";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDown } from "lucide-react";
 import * as React from "react";
-import { FiArrowRight } from "react-icons/fi";
 
 const Accordion = AccordionPrimitive.Root;
 
@@ -30,9 +30,8 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <FiArrowRight className="text-sell-dark text-2xl rotate-90" />
 
-      {/* <ChevronDown className="h-4 w-4 shrink-0 transition-transform duration-200" /> */}
+      <ChevronDown className="size-7 shrink-0 transition-transform duration-200" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ));

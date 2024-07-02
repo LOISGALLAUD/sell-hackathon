@@ -82,11 +82,17 @@ const config = {
           "0%": { left: "-100%" },
           "100%": { left: "100%" },
         },
+        "border-beam": {
+          "100%": {
+            "offset-distance": "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         shine: "shine 8s infinite ease-in-out",
+        "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
       },
       fontFamily: {
         dela: ["Dela Gothic One", "sans-serif"],

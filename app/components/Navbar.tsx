@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { BsTwitterX } from "react-icons/bs";
 
@@ -17,10 +19,15 @@ const Navbar = () => {
         />
         <h1 className="text-xl font-[500]">Sell</h1>
       </div>
-      <div className="flex flex-row justify-center items-center gap-3 cursor-pointer">
+      <a
+        href="https://x.com/loisglld"
+        rel="noopener noreferrer"
+        target="_blank"
+        className="flex flex-row justify-center items-center gap-3 cursor-pointer"
+      >
         <BsTwitterX className="text-lg" />
         <h1>Follow us on Twitter</h1>
-      </div>
+      </a>
     </nav>
   );
 };

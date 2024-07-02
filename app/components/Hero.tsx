@@ -1,5 +1,6 @@
 "use client";
 
+import { BorderBeam } from "@/components/magicui/border-beam";
 import { useToast } from "@/components/ui/use-toast";
 import { avatars } from "@/constants";
 import { getNameFromEmail, isValidEmail } from "@/lib/utils";
@@ -15,7 +16,12 @@ const Hero = () => {
   const [email, setEmail] = useState("");
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
+    const input = e.target;
+    input.classList.add("animate-pulseBorder");
+    setTimeout(() => {
+      input.classList.remove("animate-pulseBorder");
+    }, 500);
+    setEmail(input.value);
     setClicked(false);
   };
 
@@ -57,13 +63,16 @@ const Hero = () => {
       </h2>
 
       <div className="flex flex-row justify-center items-center my-5 gap-3 w-[45%]">
-        <input
-          type="email"
-          placeholder="Your best email address"
-          value={email}
-          onChange={handleEmailChange}
-          className="rounded-xl w-[66%] h-16 p-5 font-light"
-        />
+        <div className="relative w-[66%] h-16 rounded-xl">
+          <input
+            type="email"
+            placeholder="Your best email address"
+            value={email}
+            onChange={handleEmailChange}
+            className="font-light w-full rounded-xl p-5 focus:outline-none"
+          />
+          <BorderBeam />
+        </div>
         <button
           onClick={handleSubmit}
           className="bg-sell-primary text-white font-semibold rounded-xl w-[34%]

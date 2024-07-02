@@ -19,7 +19,7 @@ import { twMerge } from "tailwind-merge";
 const RevealBento = () => {
   return (
     <div
-      className="px-4 mt-32 w-full text-sell-dark
+      className="px-4 mt-20 w-full text-sell-dark
     flex flex-row justify-between"
     >
       {/* Features */}
@@ -30,6 +30,7 @@ const RevealBento = () => {
             <div
               className="flex justify-between items-center group
                 py-2 px-5 bg-white rounded-2xl shadow-md mb-2"
+              key={index}
             >
               <AccordionItem
                 key={index}
@@ -114,7 +115,9 @@ const HeaderBlock = () => (
       </span>
     </h1>
     <a
-      href="#"
+      href="https://x.com/loisglld"
+      target="_blank"
+      rel="noreferrer"
       className="flex items-center gap-1 text-sell-primary hover:underline"
     >
       Contact us on social media <FiArrowRight />

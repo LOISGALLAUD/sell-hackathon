@@ -31,7 +31,7 @@ const DoughnutCharts = () => {
   };
 
   return (
-    <div className="p-5 bg-white h-full w-[40%] rounded-xl">
+    <div className="p-5 bg-white h-full w-[40%] rounded-xl shadow-md shadow-sell-dark">
       {/* Title */}
       <h2 className="text-2xl font-semibold mb-5 text-center">
         Manage your store

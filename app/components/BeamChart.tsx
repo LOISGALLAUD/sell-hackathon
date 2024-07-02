@@ -7,7 +7,7 @@ import React, { forwardRef, useRef } from "react";
 
 const BeamChart = () => {
   return (
-    <div className="p-5 bg-white h-full w-[40%] rounded-xl overflow-hidden relative">
+    <div className="p-5 bg-white h-full w-[40%] rounded-xl overflow-hidden relative shadow-md shadow-sell-dark">
       {/* Title */}
       <h2 className="text-2xl font-semibold mb-5 text-center">
         Enhance your workflow

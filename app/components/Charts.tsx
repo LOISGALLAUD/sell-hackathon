@@ -36,7 +36,7 @@ const Charts = () => {
       <div
         className="bg-gradient-to-r from-sell-primary to-sell-secondary 
      rounded-[2rem] size-full p-16 gap-10 h-96 z-10 overflow-hidden
-      flex flex-row justify-between items-center"
+      flex flex-row justify-between items-center shadow-md"
       >
         <DoughnutCharts />
         <SalesFigures />
