@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import ArrowTop from "./components/ArrowTop";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -27,6 +28,7 @@ export default function RootLayout({
         )}
       >
         <Navbar />
+        <ArrowTop />
         {children}
         <Toaster />
         <Footer />

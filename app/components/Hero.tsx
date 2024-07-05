@@ -6,9 +6,10 @@ import { avatars } from "@/constants";
 import { getNameFromEmail, isValidEmail } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import VaporGrid from "./VaporGrid";
+
+import { useState } from "react";
 
 const Hero = () => {
   const [clicked, setClicked] = useState(false);
@@ -41,8 +42,8 @@ const Hero = () => {
   };
   return (
     <section
-      className="flex flex-col justify-center items-center text-center
-     xl:py-14 py-10 w-full xl:mb-20 mb-10"
+      className="flex flex-col justify-center items-center text-center\
+     xl:py-14 py-10 w-full xl:mb-20 mb-10 duration-700 transition-all"
     >
       <VaporGrid />
       <p
@@ -56,9 +57,14 @@ const Hero = () => {
         Introducing a new online selling platform 🎉
       </p>
 
-      <h1 className="xl:text-8xl text-5xl font-bold xl:mt-16 mt-10 mb-10 font-dela max-xl:leading-tight">
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7, type: "sween" }}
+        className="xl:text-8xl text-center text-5xl font-bold xl:mt-16 mt-10 mb-10 font-dela max-xl:leading-tight"
+      >
         Best way to sell <br className="hidden xl:block" /> your digital product
-      </h1>
+      </motion.h1>
 
       <h2 className="text-sell-light xl:text-xl text-md">
         Go from Zero to Hero with simple platform that helps{" "}

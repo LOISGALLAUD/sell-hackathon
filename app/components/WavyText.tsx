@@ -8,7 +8,7 @@ const WavyText = ({ text }: { text: string }) => {
     const interval = setInterval(() => {
       controls.start((i) => ({
         y: [0, -5, 0],
-        transition: { duration: 0.4, delay: i * 0.1 },
+        transition: { duration: 0.3, delay: i * 0.1 },
       }));
     }, 3000);
 

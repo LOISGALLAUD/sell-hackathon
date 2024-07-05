@@ -15,12 +15,40 @@ import { FiArrowRight } from "react-icons/fi";
 import { SiGithub } from "react-icons/si";
 import { SlGlobe } from "react-icons/sl";
 import { twMerge } from "tailwind-merge";
+import WavyText from "./WavyText";
+
+import { useEffect, useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 const RevealBento = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.6,
+    triggerOnce: true,
+  });
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <div
-      className="px-4 xl:mt-20 mt-10 w-full text-sell-dark
-    flex xl:flex-row flex-col justify-between"
+      ref={isDesktop ? ref : null}
+      className={cn(
+        "px-4 xl:mt-20 mt-10 w-full text-sell-dark\
+    flex xl:flex-row flex-col justify-between duration-700 transition-all",
+
+        inView || !isDesktop
+          ? "opacity-100 translate-y-0"
+          : "opacity-0 translate-y-20"
+      )}
     >
       {/* Features */}
       <div className="xl:p-4 py-10 xl:w-[50%] w-full h-full">
@@ -110,9 +138,10 @@ const HeaderBlock = () => (
       alt="avatar"
       className="mb-4 size-14 rounded-full ring-sell-dark ring-2"
     />
-    <h1 className="mb-12 text-4xl font-medium leading-tight">
-      <span className="italic">Sell</span>-utations !{" "}
-      <span className="text-sell-light">
+    <h1 className="mb-12 text-4xl font-[500] leading-tight">
+      {/* <span className="italic">Sell</span>-utations !{" "} */}
+      <WavyText text="Sell-utations !" />
+      <span className="text-sell-light font-normal">
         We are a digital product selling platform.
       </span>
     </h1>
@@ -185,7 +214,7 @@ const SocialsBlock = () => (
       }}
       className={twMerge(
         "col-span-4 rounded-3xl shadow-md bg-white p-6",
-        "col-span-6 bg-white md:col-span-3"
+        "col-span-6 bg-white md:col-span-3 aspect-square md:aspect-auto"
       )}
       whileHover={{
         rotate: "2.5deg",

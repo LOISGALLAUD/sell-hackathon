@@ -95,7 +95,7 @@ const VaporGrid: React.FC = () => {
         {circles.map((circle, index) => (
           <motion.div
             key={index}
-            className={`absolute ${circle.className} opacity-75 ${circle.size} rounded-full blur-3xl`}
+            className={`absolute ${circle.className} opacity-75 ${circle.size} rounded-full blur-2xl`}
             style={{ top: circle.top, left: circle.left }}
             custom={circle}
             variants={{
