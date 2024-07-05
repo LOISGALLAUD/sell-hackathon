@@ -34,29 +34,31 @@ const Newsletter = () => {
 
   return (
     <section
-      className="bg-white rounded-2xl w-[90%] px-28 py-20 mt-20
+      className="bg-white rounded-2xl w-[90%] xl:px-28 px-2 xl:py-20 py-7 mt-20
     flex flex-col justify-center items-center shadow-md"
     >
-      <h1 className="font-dela text-5xl text-center mb-8">
+      <h1 className="xl:text-7xl text-4xl text-center font-bold xl:mt-16 mt-10 mb-10 font-dela max-xl:leading-tight">
         Be the first to know about new features, special offers, and more.
       </h1>
-      <div className="flex flex-row justify-center items-center my-5 gap-3 w-[45%]">
-        <div className="relative w-[66%] h-16 rounded-xl">
+
+      <div className="flex flex-row justify-center items-center px-4 my-5 xl:gap-3 gap-1 xl:w-[45%] w-full">
+        <div className="relative w-[66%] xl:h-16 h-12 xl:rounded-xl rounded-md">
           <input
             type="email"
             placeholder="Your best email address"
             value={email}
             onChange={handleEmailChange}
-            className="font-light w-full rounded-xl p-5 focus:outline-none shadow-md"
+            className="font-light size-full xl:rounded-xl rounded-md p-5 focus:outline-none shadow-md xl:text-base text-xs"
           />
           <BorderBeam />
         </div>
         <button
           onClick={handleSubmit}
-          className="bg-sell-primary text-white font-semibold rounded-xl w-[34%]
-        transition-all shadow-[3px_3px_0px_black] h-16
+          className="bg-sell-primary text-white font-semibold xl:rounded-xl rounded-md w-[34%]
+        transition-all shadow-[3px_3px_0px_black] xl:h-16 h-12
         hover:shadow-none hover:translate-x-[3px] hover:translate-y-[3px]"
         >
+          {/* Try it out */}
           {clicked ? (
             <motion.div
               initial={{ scale: 0, opacity: 0 }}
@@ -65,7 +67,7 @@ const Newsletter = () => {
               <FaRegCheckCircle className="inline-block text-3xl" />
             </motion.div>
           ) : (
-            "Join the waitlist"
+            "Try it out"
           )}
         </button>
       </div>

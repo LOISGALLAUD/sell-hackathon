@@ -19,12 +19,12 @@ import { twMerge } from "tailwind-merge";
 const RevealBento = () => {
   return (
     <div
-      className="px-4 mt-20 w-full text-sell-dark
-    flex flex-row justify-between"
+      className="px-4 xl:mt-20 mt-10 w-full text-sell-dark
+    flex xl:flex-row flex-col justify-between"
     >
       {/* Features */}
-      <div className="p-4 w-[50%] h-full">
-        <h2 className="text-5xl font-dela mb-5 px-4">Features</h2>
+      <div className="xl:p-4 py-10 xl:w-[50%] w-full h-full">
+        <h2 className="text-4xl xl:text-5xl font-dela mb-5 px-4">Features</h2>
         <Accordion type="single" collapsible className="size-full">
           {features.map((feature, index) => (
             <div
@@ -43,7 +43,9 @@ const RevealBento = () => {
                       className={cn("text-4xl", feature.iconColor)}
                     />
                     <div className="relative">
-                      <h3 className="text-xl font-medium">{feature.title}</h3>
+                      <h3 className="xl:text-xl text-md font-medium text-start leading-tight">
+                        {feature.title}
+                      </h3>
                       <span
                         className="absolute bottom-0 left-0 h-[2px] w-0 bg-sell-dark
                       transition-all delay-0 duration-200 group-hover:w-full"
@@ -61,8 +63,8 @@ const RevealBento = () => {
       </div>
 
       {/* About us */}
-      <div className="p-4 w-[50%] h-full">
-        <h2 className="text-5xl font-dela mb-5 px-4">About us</h2>
+      <div className="xl:p-4 py-10 xl:w-[50%] w-full h-full">
+        <h2 className="text-4xl xl:text-5xl font-dela mb-5 px-4">About us</h2>
         <motion.div
           initial="initial"
           animate="animate"
@@ -147,7 +149,7 @@ const SocialsBlock = () => (
       }}
       className={twMerge(
         "col-span-4 rounded-3xl shadow-md bg-white p-6",
-        "col-span-6 bg-sell-dark md:col-span-3"
+        "col-span-6 bg-sell-dark md:col-span-3 aspect-square"
       )}
       whileHover={{
         rotate: "-2.5deg",
@@ -220,7 +222,7 @@ const SocialsBlock = () => (
       }}
       className={twMerge(
         "col-span-4 rounded-3xl shadow-md bg-white p-6",
-        "col-span-6 bg-white md:col-span-3"
+        "col-span-6 bg-white md:col-span-3 aspect-square"
       )}
       whileHover={{
         rotate: "-2.5deg",
@@ -257,7 +259,7 @@ const SocialsBlock = () => (
       }}
       className={twMerge(
         "col-span-4 rounded-3xl shadow-md bg-white p-6",
-        "col-span-6 bg-sell-dark md:col-span-3"
+        "col-span-6 bg-sell-dark md:col-span-3 aspect-square"
       )}
       whileHover={{
         rotate: "2.5deg",
@@ -265,7 +267,7 @@ const SocialsBlock = () => (
       }}
     >
       <a
-        href="https://twitter.com/loisgallaud"
+        href="https://x.com/loisglld"
         target="_blank"
         rel="noreferrer"
         className="grid h-full place-content-center text-3xl text-white"

@@ -87,7 +87,7 @@ const SalesFigures = () => {
               }}
             />
           </div>
-          <div className="flex flex-col justify-center items-center gap-2 mt-5 xl:mt-0">
+          <div className="flex flex-col justify-center items-center gap-2 mt-2 xl:mt-0">
             <h4 className="hidden xl:block text-sm ml-2 text-center">
               Fantastic right ?
             </h4>
