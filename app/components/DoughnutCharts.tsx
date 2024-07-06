@@ -79,8 +79,8 @@ const DoughnutCharts = () => {
         </div>
 
         <div className="flex flex-col justify-start">
-          <p className="xl:text-md text-sm flex justify-center items-center">
-            <span className="font-normal xl:font-semibold flex justify-center items-center">
+          <p className="xl:text-md text-sm">
+            <span className="font-normal xl:font-semibold">
               Manage your products &nbsp;
             </span>
             <span className="hidden xl:block">
